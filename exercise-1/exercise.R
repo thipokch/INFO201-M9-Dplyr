@@ -28,7 +28,6 @@ worst.hwy <- two.wheels.20.mpg$id[two.wheels.20.mpg$hwy == min(two.wheels.20.mpg
 # The vehicle that gets the most hwy miles/gallon of vehicles of that make in that year
 MakeYear <- function(make,year) {
   filtered <- vehicles[vehicles$make == make & vehicles$year == year,]
-  View(filtered)
   return(filtered$model[filtered$hwy == max(filtered$hwy)])
 }
 
